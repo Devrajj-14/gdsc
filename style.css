@@ -1,0 +1,91 @@
+/* Base setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient background */
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent header */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+}
+
+/* Main content area */
+.center-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Changed to space-around for better spacing */
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px; /* Added margin-top for spacing from header */
+}
+
+/* Editor and Preview sections */
+.left-side, .right-side {
+    flex: 1; /* Flexible sizing */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px; /* Increased border-radius */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 75vh;
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.left-side:hover, .right-side:hover {
+    transform: scale(1.03); /* Slight scale effect on hover */
+}
+
+/* Typography enhancements */
+.left-side p, .right-side p {
+    font-size: 18px; /* Larger font size */
+    color: #4a69bd; /* Color change for better contrast */
+    font-weight: 500; /* Medium font weight */
+    margin-bottom: 20px; /* Added bottom margin for spacing */
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgba(255, 255, 255, 0.2); /* Matching semi-transparent style */
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px; /* Increased padding for more space */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px; /* Larger font size */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Matching subtle border */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .center-div {
+        flex-direction: column;
+    }
+
+    .left-side, .right-side {
+        width: 90%; /* Adjusted width for better fit */
+        margin: 10px auto; /* Centering in column layout */
+        max-height: 60vh; /* Adjusted max height for better fit */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header, .footer {
+        padding: 15px 5px; /* Adjusted padding for smaller screens */
+    }
+
+    .left-side p, .right-side p {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+}
